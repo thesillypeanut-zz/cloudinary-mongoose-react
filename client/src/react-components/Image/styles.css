@@ -1,11 +1,11 @@
-/* Styles for the Student React component */
+/* Styles for the Image React component */
 
-.student {
+.image {
   margin-bottom: 5px;
   font-size: 150%;
 }
 
-.student .MuiTableCell-root {
+.image .MuiTableCell-root {
   font-size: 0.75em;
   color: darkslategray;
 }

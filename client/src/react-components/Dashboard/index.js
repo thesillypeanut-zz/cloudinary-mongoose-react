@@ -17,8 +17,8 @@ class Dashboard extends React.Component {
             <div className="App">
                 {/* Header component with text props. */}
                 <Header
-                    title="Cloudinary Image Uploader"
-                    subtitle="Save images to your local MongoDB and on the cloud"
+                    title="Cloudinary Image Manager"
+                    subtitle="Save images to your local MongoDB and on the cloud &#9729;"
                 />
 
                 {/* Image Upload Form */}

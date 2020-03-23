@@ -1,8 +1,6 @@
 import React from "react";
 import { uid } from "react-uid";
 import Button from "@material-ui/core/Button";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
 
 import Image from "../Image";
 
@@ -12,7 +10,7 @@ import { getImages } from "../../actions/image";
 import "./../../App.css";
 import "./styles.css";
 
-/* Component for the List of Students */
+/* Component for the List of Images */
 class ImageList extends React.Component {
 
     // image list state
@@ -27,7 +25,7 @@ class ImageList extends React.Component {
             <React.Fragment>
                 <Button
                     onClick={() => getImages(this)}
-                    className="student-list__button app__horizontal-center"
+                    className="image-list__button app__horizontal-center"
                     variant="contained"
                 >
                     Show Images

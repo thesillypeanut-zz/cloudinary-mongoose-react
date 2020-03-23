@@ -1,25 +1,25 @@
-/* Styles for the StudentForm React component */
+/* Styles for the ImageForm React component */
 
-.student-form {
+.image-form {
   justify-content: center;
 }
 
-.student-form .MuiGrid-root {
+.image-form .MuiGrid-root {
   text-align: center;
 }
 
-.MuiButton-root.student-form__submit-button {
+.MuiButton-root.image-form__submit-button {
   background-color: #457474;
 }
 
-.student-form__button-grid {
+.image-form__button-grid {
   line-height: 5;
 }
 
-.student-form__message--success {
+.image-form__message--success {
   color: green;
 }
 
-.student-form__message--error {
+.image-form__message--error {
   color: red;
 }
