@@ -10,7 +10,7 @@ class Image extends React.Component {
 
     return (
       <div className="image">
-        <img src={image.image_src} />
+        <img src={image.image_url} />
       </div>
     );
   }

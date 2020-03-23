@@ -25,7 +25,7 @@ class Dashboard extends React.Component {
                 <ImageForm dashboard={this} />
 
                 {/* Images List */}
-                {/* <ImageList /> */}
+                <ImageList />
             </div>
         );
     }

@@ -41,7 +41,7 @@ app.post("/images", multipartMiddleware, (req, res) => {
             // Create a new image using the Image mongoose model
             var img = new Image({
                 image_url: result.url,
-                image_id: result.public_id,
+                created_at: new Date(),
             });
 
             // Save image to the database
@@ -60,7 +60,6 @@ app.post("/images", multipartMiddleware, (req, res) => {
 app.get("/images", (req, res) => {
     Image.find().then(
         images => {
-            log();
             res.send({ images }); // can wrap in object if want to add more properties
         },
         error => {

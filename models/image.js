@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 // create an image schema
 const imageSchema = mongoose.Schema({
     image_url: String,
-    image_id: String
+    created_at: String
 });
 
 // create an image model using the schema
