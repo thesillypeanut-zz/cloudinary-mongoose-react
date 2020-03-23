@@ -21,6 +21,8 @@ class ImageList extends React.Component {
     }
 
     render() {
+        const { dashboard } = this.props;
+
         return (
             <React.Fragment>
                 <Button
@@ -39,6 +41,8 @@ class ImageList extends React.Component {
                                     image
                                 )} /* unique id required to help React render more efficiently when we delete images. */
                                 image={image}
+                                dashboard={dashboard}
+                                imageList={this}
                             />
                         ))}
                     </div>

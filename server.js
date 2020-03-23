@@ -40,7 +40,8 @@ app.post("/images", multipartMiddleware, (req, res) => {
 
             // Create a new image using the Image mongoose model
             var img = new Image({
-                image_url: result.url,
+                image_id: result.public_id, // image id on cloudinary server
+                image_url: result.url, // image url on cloudinary server
                 created_at: new Date(),
             });
 
@@ -69,27 +70,26 @@ app.get("/images", (req, res) => {
 });
 
 /// a DELETE route to remove an image by its id.
-app.delete("/images/:id", (req, res) => {
-    const id = req.params.id;
+app.delete("/images/:imageId", (req, res) => {
+    const imageId = req.params.imageId;
 
-    // Validate id
-    if (!ObjectID.isValid(id)) {
-        res.status(404).send();
-        return;
-    }
+    // Delete an image by its id (NOT the database ID, but its id on the cloudinary server)
+    // on the cloudinary server
+    cloudinary.uploader.destroy(imageId, function (result) {
 
-    // Delete a student by their id
-    Student.findByIdAndRemove(id)
-        .then(student => {
-            if (!student) {
-                res.status(404).send();
-            } else {
-                res.send(student);
-            }
-        })
-        .catch(error => {
-            res.status(500).send(); // server error, could not delete.
-        });
+        // Delete the image from the database
+        Image.findOneAndRemove({ image_id: imageId })
+            .then(img => {
+                if (!img) {
+                    res.status(404).send();
+                } else {
+                    res.send(img);
+                }
+            })
+            .catch(error => {
+                res.status(500).send(); // server error, could not delete.
+            });
+    });
 });
 
 /*** Webpage routes below **********************************/

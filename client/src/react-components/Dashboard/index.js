@@ -17,15 +17,15 @@ class Dashboard extends React.Component {
             <div className="App">
                 {/* Header component with text props. */}
                 <Header
-                    title="Cloudinary Example"
-                    subtitle="Save images to your local MongoDB"
+                    title="Cloudinary Image Uploader"
+                    subtitle="Save images to your local MongoDB and on the cloud"
                 />
 
                 {/* Image Upload Form */}
                 <ImageForm dashboard={this} />
 
                 {/* Images List */}
-                <ImageList />
+                <ImageList dashboard={this} />
             </div>
         );
     }
