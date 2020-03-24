@@ -50,3 +50,7 @@ node server.js
 ```
 
 Alternatively, you can run `npm run build-run` in the root directory which runs a script to execute all the above commands. This is a shortcut command defined in [package.json](package.json).
+
+## Cloudinary Account
+
+Register for a free account [here](https://cloudinary.com/users/register/free). In `server.js` configure Cloudinary using your credentials found on your Cloudinary dashboard.

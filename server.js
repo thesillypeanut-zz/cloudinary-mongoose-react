@@ -21,9 +21,9 @@ const multipartMiddleware = multipart();
 // sign up for a free account here: https://cloudinary.com/users/register/free
 const cloudinary = require('cloudinary');
 cloudinary.config({
-    cloud_name: 'deu0vxwxy',
-    api_key: '782466833752885',
-    api_secret: 'YNUops0hxE7kfxtohXalRIARX9w'
+    cloud_name: 'CLOUD_NAME',
+    api_key: 'API_KEY',
+    api_secret: 'API_SECRET'
 });
 
 /*********************************************************/
