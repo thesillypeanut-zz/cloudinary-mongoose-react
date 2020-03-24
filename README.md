@@ -1,14 +1,16 @@
-# React Express Auth
+# Cloudinary-Mongoose-React
 
 This example demonstrates how to:
 
--   connect your React frontend to Express backend and MongoDB
--   create user sessions using cookies
--   use global state and prop drilling
--   organize your app so that your code is maintainable
--   make your app prettier using Material UI ✨
+-   connect your React frontend to Express backend, MongoDB and the [Cloudinary](https://cloudinary.com/) API
+-   upload images to the Cloudinary server and your local MongoDB
+-   delete images from the Cloudinary server and your local MongoDB
 
-Note: The JSON routes (`/students`) are *not* protected (no authentication required).  You can (and should!) add this using similar middleware techniques we used in lecture.
+Refer to this [tutorial](https://cloudinary.com/blog/build_the_back_end_for_your_own_instagram_style_app_with_cloudinary) for more advanced functionalities such as:
+
+- [Progress and Preview](https://cloudinary.com/blog/build_the_back_end_for_your_own_instagram_style_app_with_cloudinary#progress_and_preview)
+- [Incoming](https://cloudinary.com/blog/build_the_back_end_for_your_own_instagram_style_app_with_cloudinary#incoming_transformation) and [Eager](https://cloudinary.com/blog/build_the_back_end_for_your_own_instagram_style_app_with_cloudinary#eager_transformation) image transformations
+- and more
 
 ## Setup
 Start your local Mongo database.  For example, in a separate terminal window:
@@ -48,99 +50,3 @@ node server.js
 ```
 
 Alternatively, you can run `npm run build-run` in the root directory which runs a script to execute all the above commands. This is a shortcut command defined in [package.json](package.json).
-
-## Creating a User
-
-There is no frontend form to create a user on the app, so before you login send a `POST` request to `/users` with something like:
-```
-{
-    "email": "bob@gmail.com",
-    "password": "123456"
-}
-```
-Then proceed to `http://localhost:5000` in your browser and login with your credentials.
-
-## Directory Structure
-
-```
-react-express-auth
-├── db
-│   └── mongoose.js
-├── models
-│   ├── user.js
-│   └── student.js
-├── package.json
-├── server.js
-└── client
-    ├── public
-    │   ├── index.html
-    │   └── ...
-    ├── tests
-    │   └── ...
-    └── src
-        ├── actions
-        │   ├── student.js
-        │   └── user.js
-        ├── react-components
-        │   ├── Dashboard
-        │   │   └── index.js
-        │   ├── StudentForm
-        │   │   ├── index.js
-        │   │   └── styles.css
-        │   ├── Student
-        │   │   ├── index.js
-        │   │   └── styles.css
-        │   └── ...
-        ├── index.js
-        ├── index.css
-        ├── App.js
-        ├── App.css
-        ├── package.json
-        └── serviceWorker.js
-```
-
-## React Components
-
-Each React component lives in a separate directory with its own `index.js` and `styles.css`. Import them from parent components as needed.
-
-### Styles
-
-Unique styles associated with each React component are kept separate. If the same styles are shared between multiple React components, keep them in a top-level, shared CSS file (i.e. App.css) to avoid repeated styles.
-
-### Material UI
-
-The following Material UI components are used in this app:
-
--   Button
--   TextField
--   Grid
--   Table
--   Table Body
--   Table Row
--   Table Cell
-
-You can find more components [here](https://material-ui.com/).
-
-Note that you can override the default styles of these components by increasing CSS selector specificity.
-
-### Actions
-
-To keep your `index.js` files clean and simple, import required methods from an associated action file. Following this structure can help organize your code and keep it manageable.
-
-## Deployment
-
-The `start` and `heroku-postbuild` scripts included in [package.json](package.json) will tell Heroku how to run your app.  You can deploy to Heroku easily:
-
-```
-# create a new empty Heroku app in the root directory (only need to be done once)
-heroku create
-
-# deploy the latest committed version of your code to Heroku
-git push heroku master
-```
-
-Don't forget to set the `MONGODB_URI` environmental variable to use a cloud Mongo database (like Atlas).
-
-
-
-

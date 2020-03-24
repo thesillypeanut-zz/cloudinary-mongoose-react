@@ -1,5 +1,5 @@
 {
-    "name": "cloudinary_mongoose_react",
+    "name": "cloudinary-mongoose-react",
     "version": "1.0.0",
     "description": "",
     "main": "server.js",
