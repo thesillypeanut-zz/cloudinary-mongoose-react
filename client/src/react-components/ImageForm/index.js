@@ -14,19 +14,19 @@ class ImageForm extends React.Component {
 
         return (
             <React.Fragment>
-                <form onSubmit={(e) => {
+                <form className="image-form" onSubmit={(e) => {
                     e.preventDefault();
                     addImage(e.target, dashboard);
                 }}>
-                    <div class="field">
-                        <label>Image</label>
+                    <div class="image-form__field">
+                        <label>Image:</label>
                         <input name="image" type="file" />
                     </div>
                     <Button
                         variant="contained"
                         color="primary"
-                        className="image-form__submit-button"
                         type="submit"
+                        className="image-form__submit-button"
                     >
                         Upload
                     </Button>

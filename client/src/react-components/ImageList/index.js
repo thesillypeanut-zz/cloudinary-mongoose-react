@@ -1,6 +1,7 @@
 import React from "react";
 import { uid } from "react-uid";
 import Button from "@material-ui/core/Button";
+import Grid from '@material-ui/core/Grid';
 
 import Image from "../Image";
 
@@ -31,9 +32,9 @@ class ImageList extends React.Component {
                     Show Images
                 </Button>
 
-                <div class="ui grid container">
-                    <div class="ui three column centered grid">
-                        {this.state.imageList.map(image => (
+                <Grid container spacing={1}>
+                    {this.state.imageList.map(image => (
+                        <Grid item xs={6} md={3}>
                             <Image
                                 key={uid(
                                     image
@@ -42,9 +43,9 @@ class ImageList extends React.Component {
                                 dashboard={dashboard}
                                 imageList={this}
                             />
-                        ))}
-                    </div>
-                </div>
+                        </Grid>
+                    ))}
+                </Grid>
             </React.Fragment >
         );
     }

@@ -1,11 +1,10 @@
 /* Styles for the Image React component */
 
-.image {
-  margin-bottom: 5px;
-  font-size: 150%;
+.MuiCardMedia-root.image__card-media {
+  height: 300px;
+  background-position: inherit;
 }
 
-.image .MuiTableCell-root {
-  font-size: 0.75em;
-  color: darkslategray;
+.MuiCardActions-root.image__card-actions {
+  justify-content: center;
 }

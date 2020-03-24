@@ -20,10 +20,11 @@ class Image extends React.Component {
         <CardActionArea>
 
           <CardMedia
+            className="image__card-media"
             image={image.image_url}
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h5" component="h3">
               Uploaded on:
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
@@ -33,7 +34,7 @@ class Image extends React.Component {
 
         </CardActionArea>
 
-        <CardActions>
+        <CardActions className="image__card-actions">
 
           <Button onClick={() => deleteImage(image.image_id, dashboard, imageList)} size="small" color="primary">
             Remove

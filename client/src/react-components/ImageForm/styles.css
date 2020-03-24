@@ -1,19 +1,16 @@
 /* Styles for the ImageForm React component */
 
 .image-form {
-  justify-content: center;
+  text-align: center;
 }
 
-.image-form .MuiGrid-root {
-  text-align: center;
+.image-form__field {
+  display: inline-block;
+  padding-right: 20px;
 }
 
 .MuiButton-root.image-form__submit-button {
   background-color: #457474;
-}
-
-.image-form__button-grid {
-  line-height: 5;
 }
 
 .image-form__message--success {

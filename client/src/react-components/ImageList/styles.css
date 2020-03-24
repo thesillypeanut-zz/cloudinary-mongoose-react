@@ -1,10 +1,6 @@
 /* Styles for the ImageList React component */
 
-.MuiTable-root.image-list {
-  margin: auto;
-  width: 350px;
-}
-
 .MuiButton-root.image-list__button {
   margin-top: 50px;
+  margin-bottom: 20px;
 }

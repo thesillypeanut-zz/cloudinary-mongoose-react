@@ -93,7 +93,7 @@ export const deleteImage = (imageId, dashboardComp, imageListComp) => {
 
                 // Also remove the image from the imageList state
                 // Use filter to only keep the images you want.
-                const filteredList = imageListComp.state.imageList.filter(img => img.image_id != imageId);
+                const filteredList = imageListComp.state.imageList.filter(img => img.image_id !== imageId);
                 imageListComp.setState(
                     { imageList: filteredList }
                 );
