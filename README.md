@@ -33,6 +33,10 @@ npm install
 
 Alternatively, you can run `npm run setup` in the root directory which runs a script to execute all the above commands (not including starting the mongo database, since it should be run in a separate window). This is a shortcut command defined in [package.json](package.json).
 
+### Cloudinary Account
+
+Register for a free account [here](https://cloudinary.com/users/register/free). In `server.js`, replace the placeholder strings in [lines 24-26](https://github.com/thesillypeanut/cloudinary-mongoose-react/blob/master/server.js#L24-L26) using your credentials found on your Cloudinary dashboard.
+
 ## Development
 
 During development, run the following commands to build your React app and start the Express server.  You should re-run these commands for your app to reflect any changes in the code. Make sure mongo is still running on a separate terminal.
@@ -50,7 +54,3 @@ node server.js
 ```
 
 Alternatively, you can run `npm run build-run` in the root directory which runs a script to execute all the above commands. This is a shortcut command defined in [package.json](package.json).
-
-## Cloudinary Account
-
-Register for a free account [here](https://cloudinary.com/users/register/free). In `server.js` configure Cloudinary using your credentials found on your Cloudinary dashboard.
