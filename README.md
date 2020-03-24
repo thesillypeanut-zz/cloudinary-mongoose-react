@@ -35,7 +35,7 @@ Alternatively, you can run `npm run setup` in the root directory which runs a sc
 
 ### Cloudinary Account
 
-Register for a free account [here](https://cloudinary.com/users/register/free). In `server.js`, replace the placeholder strings in [lines 24-26](https://github.com/thesillypeanut/cloudinary-mongoose-react/blob/master/server.js#L24-L26) using your credentials found on your Cloudinary dashboard.
+Register for a free account [here](https://cloudinary.com/users/register/free). In `server.js`, replace the placeholder strings in lines 24-26 using your credentials found on your Cloudinary dashboard.
 
 ## Development
 
